@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { prompt } = req.body
 const response = await openai.createCompletion({
   model: "code-davinci-002",
-  prompt: `${prompt} SELECT`,
+  prompt: `${prompt} # SELECT`,
   temperature: 0,
   max_tokens: 150,
   top_p: 1.0,
