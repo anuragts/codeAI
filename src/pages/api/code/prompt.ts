@@ -14,7 +14,7 @@ const openai = new OpenAIApi(
 );
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-    const {prompt} = req.body
+    const { prompt } = req.body
     const { data } = await openai.createCompletion({
         model: "code-davinci-002",
         prompt: `${prompt}`,
