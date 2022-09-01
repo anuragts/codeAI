@@ -14,7 +14,7 @@ export default function Sql() {
         const data = new FormData(form);
         const dataObj = Object.fromEntries(data);
         setLoading(true);
-        console.log(dataObj.prompt);
+        // console.log(dataObj.prompt);
         const response = await fetch('/api/code/sql', {
             method: 'POST',
             body: JSON.stringify({ prompt: dataObj.prompt }),
