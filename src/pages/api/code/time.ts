@@ -14,16 +14,16 @@ const openai = new OpenAIApi(
 );
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-    const { prompt } = req.body
+    const { prompt } = req.body;
     const { data } = await openai.createCompletion({
         model: "code-davinci-002",
-        prompt: `${prompt} # const`,
+        prompt: `${prompt} The time complexity of this function is `,
         temperature: 0,
-        max_tokens: 256,
+        max_tokens: 64,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-        stop: ["#","\n\n"],
-});
+        stop: ["\n",'\\n'],
+    });
     res.status(200).json(data.choices[0].text);
-};
+}   

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export default function Sql() {
+export default function Time() {
     const [data, setData] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
 
@@ -10,8 +10,8 @@ export default function Sql() {
         const data = new FormData(form);
         const dataObj = Object.fromEntries(data);
         setLoading(true);
-        // console.log(dataObj.prompt);
-        const response = await fetch('/api/code/sql', {
+        
+        const response = await fetch('/api/code/time', {
             method: 'POST',
             body: JSON.stringify({ prompt: dataObj.prompt }),
             headers: {
@@ -19,13 +19,14 @@ export default function Sql() {
             },
         });
         const result = await response.json();
-        // console.log(result);    
-        let formatted = result.replace(/(\r\n|\n|\\n|\r)/gm, ` \n ` )
-        let formatted2:any = "SELECT "+formatted.replace(/ +(?= )/g,'');
-        setData(formatted2);
-        // console.log(result);
+
+        setData(result);
         setLoading(false);
-    }
+
+
+        
+}
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
