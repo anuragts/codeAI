@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Lang() {
+    // get selected language from select element
     const [data , setData] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
 
@@ -9,11 +10,12 @@ export default function Lang() {
         const form = e.target;
         const data = new FormData(form);
         const dataObj = Object.fromEntries(data);
+        console.log(dataObj);
         setLoading(true);
 
         const response = await fetch('/api/code/lang', {
             method: 'POST',
-            body: JSON.stringify({ prompt: dataObj.prompt }),
+            body: JSON.stringify({ prompt: dataObj.prompt, lang: dataObj.lang }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -29,6 +31,10 @@ export default function Lang() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
+                <select name="lang" id="">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
                 <input type="text" name="prompt" placeholder="Enter your query" />
                 <button type="submit">Submit</button>
             </form>

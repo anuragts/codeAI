@@ -12,10 +12,11 @@ const openai = new OpenAIApi(
 );
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { prompt } = req.body;
+  const {lang} = req.body;
 
   const { data } = await openai.createCompletion({
     model: "code-davinci-002",
-    prompt:`Javascript${prompt} # \n\n#  Explanation of what the code does  \n\n#`,
+    prompt:`${lang}${prompt} # \n\n#  Explanation of what the code does  \n\n#`,
     temperature: 0,
     max_tokens: 64,
     top_p: 1,
