@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
+import { Navbar } from '../components/Navbar'
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>codeAI</title>
+        <title >codeAI</title>
       </Head>
-    <div>
+    <div className='text-3xl font-bold text-center'>
     Hello World
     </div>
     </>

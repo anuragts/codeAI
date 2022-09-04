@@ -1,16 +1,15 @@
-import React from "react";
-
+import { useState } from "react";
 export default function Lang() {
     // get selected language from select element
-    const [data , setData] = React.useState([]);
-    const [loading, setLoading] = React.useState(false);
+    const [data , setData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e :any) => {
         e.preventDefault();
         const form = e.target;
         const data = new FormData(form);
         const dataObj = Object.fromEntries(data);
-        console.log(dataObj);
+        // console.log(dataObj);
         setLoading(true);
 
         const response = await fetch('/api/code/lang', {

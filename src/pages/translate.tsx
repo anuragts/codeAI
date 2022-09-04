@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-
-export default function Js() {
+export default function Translate() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -10,11 +9,13 @@ export default function Js() {
         const form = e.target;
         const data = new FormData(form);
         const dataObj = Object.fromEntries(data);
+        console.log(dataObj);
+
         setLoading(true);
 
-        const response = await fetch('/api/code/js', {
+        const response = await fetch('/api/code/translate', {
             method: 'POST',
-            body: JSON.stringify({ prompt: dataObj.prompt }),
+            body: JSON.stringify({ prompt: dataObj.prompt,lang1: dataObj.lang1,lang2: dataObj.lang2 }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -22,7 +23,7 @@ export default function Js() {
         const result = await response.json();
 
         let formatted = result.replace(/(\r\n|\n|\\n|\r)/gm, ` \n ` )
-        let formatted2:any = "const "+formatted.replace(/ +(?= )/g,'');
+        let formatted2:any = formatted.replace(/ +(?= )/g,'');
         let formatted3:any = formatted2.replace(/;/g, `; \n ` )
 
         setData(formatted3);
@@ -32,6 +33,14 @@ export default function Js() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
+            <select name="lang1" id="">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+                <select name="lang2" id="">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
                 <input type="text" name="prompt" placeholder="Enter your query" />
                 <button type="submit">Submit</button>
             </form>
@@ -39,4 +48,6 @@ export default function Js() {
             <pre>{data}</pre>
         </div>
     )
+
+
 }
