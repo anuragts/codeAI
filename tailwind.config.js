@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#222831",
+        secondary: "#EEEEEE",
+        third: "#00ADB5",
+        accent: "#393E46",
+      },
       screens: {
 				sm: "450px",
 		
