@@ -1,7 +1,9 @@
-const help = () => {
+import { NextPage } from "next"
+
+const Help:NextPage = () => {
   return (
     <div>help</div>
   )
 }
 
-export default help
+export default Help

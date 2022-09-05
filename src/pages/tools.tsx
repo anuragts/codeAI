@@ -1,9 +1,10 @@
+import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { DiJavascript1 } from "react-icons/di";
 import { SiMysql } from "react-icons/si";
 import {VscFileCode} from 'react-icons/vsc'
 
-function tools() {
+const Tools:NextPage = () => { {
   const router = useRouter();
   return (
     <>
@@ -59,4 +60,4 @@ function tools() {
   );
 }
 
-export default tools;
+export default Tools;
