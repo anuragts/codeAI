@@ -4,7 +4,7 @@ import { DiJavascript1 } from "react-icons/di";
 import { SiMysql } from "react-icons/si";
 import {VscFileCode} from 'react-icons/vsc'
 
-const Tools:NextPage = () => { {
+const Tools:NextPage = () => { 
   const router = useRouter();
   return (
     <>
@@ -58,6 +58,7 @@ const Tools:NextPage = () => { {
       </div>
     </>
   );
-}
+};
 
-export default Tools;
+export default Tools
+
