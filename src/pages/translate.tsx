@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Spinner from "./components/Spinner";
 
 export default function Translate() {
     const [data, setData] = useState([]);
@@ -44,7 +45,7 @@ export default function Translate() {
                 <input type="text" name="prompt" placeholder="Enter your query" />
                 <button type="submit">Submit</button>
             </form>
-            {loading ? <div>Loading...</div> : null}
+            {loading ? <Spinner/> : null}
             <pre>{data}</pre>
         </div>
     )

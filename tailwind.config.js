@@ -11,6 +11,8 @@ module.exports = {
         secondary: "#EEEEEE",
         third: "#00ADB5",
         accent: "#393E46",
+        'bl':'rgba(0, 0, 0, 0.5)',
+
       },
       screens: {
 				sm: "450px",

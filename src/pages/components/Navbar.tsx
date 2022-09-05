@@ -6,7 +6,7 @@ const Navbar: NextPage = () => {
     <>
       <Head>
         <title>codeAI</title>
-        <meta name="description" content="HackerNews but with better looks" />
+        <meta name="description" content="Your AI pair programmer." />
       </Head>
       < div className="flex justify-center py-10 text-2xl">
         <div className="mx-[2rem] text-hacker cursor-pointer	">
