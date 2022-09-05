@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Spinner from "./components/Spinner";
 
 
 export default function Js() {
@@ -30,13 +31,19 @@ export default function Js() {
 
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="prompt" placeholder="Enter your query" />
-                <button type="submit">Submit</button>
-            </form>
-            {loading ? <div>Loading...</div> : null}
-            <pre>{data}</pre>
-        </div>
+        <div className="text-center">
+      <div className="my-5 text-3xl"> Javascript/Typescript Generator💎</div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" className="text-xl resize rounded-md mt-5 px-20 py-5  " name="prompt" placeholder="Enter your query" /> <br />
+        <button
+          type="submit"
+          className="bg-third text-xl text-secondary mt-10 rounded px-10 py-2 my-4 hover:bg-secondary hover:text-third border-2 border-third"
+        >
+          Submit
+        </button>
+      </form>
+      {loading ? <Spinner/> : null}
+      <textarea className="resize rounded-md w-[40rem] h-[20rem] px-5 py-5 mt-10" value={data}></textarea>
+    </div>
     )
 }

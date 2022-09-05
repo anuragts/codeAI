@@ -1,9 +1,9 @@
-import React from "react";
+import {useState} from "react";
 import Spinner from "./components/Spinner";
 
 export default function Sql() {
-  const [data, setData] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
