@@ -47,7 +47,7 @@ export default function Translate() {
           <select
             name="lang1"
             id=""
-            className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third"
+            className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
           >
             <option value="python">Python</option>
             <option value="javascript">JavaScript</option>
@@ -55,7 +55,7 @@ export default function Translate() {
           <select
             name="lang2"
             id=""
-            className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third"
+            className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
           >
             <option value="javascript">JavaScript</option>
             <option value="python">Python</option>
