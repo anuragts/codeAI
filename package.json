@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
+    "copy-to-clipboard": "^3.3.2",
     "dotenv": "^16.0.2",
     "next": "12.2.5",
     "openai": "^3.0.0",

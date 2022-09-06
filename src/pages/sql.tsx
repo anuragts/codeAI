@@ -1,5 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
 import Spinner from "./components/Spinner";
+import copy from "copy-to-clipboard";
+import {BsClipboard} from "react-icons/bs";
 
 export default function Sql() {
   const [data, setData] = useState([]);
@@ -26,13 +28,18 @@ export default function Sql() {
     setData(formatted2);
     // console.log(result);
     setLoading(false);
-    
   };
   return (
     <div className="text-center">
       <div className="my-5 text-3xl"> SQL Query Generator🚀 </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" className="text-xl resize rounded-md mt-5 px-20 py-5  " name="prompt" placeholder="Enter your query" /> <br />
+        <input
+          type="text"
+          className="text-xl resize rounded-md mt-5 px-20 py-5  "
+          name="prompt"
+          placeholder="Enter your query"
+        />{" "}
+        <br />
         <button
           type="submit"
           className="bg-third text-xl text-secondary mt-10 rounded px-10 py-2 my-4 hover:bg-secondary hover:text-third border-2 border-third"
@@ -40,8 +47,20 @@ export default function Sql() {
           Submit
         </button>
       </form>
-      {loading ? <Spinner/> : null}
-      <textarea className="resize rounded-md w-[40rem] h-[20rem] text-center py-5 mt-10" value={data}></textarea>
+      {loading ? <Spinner /> : null}
+      <textarea
+        className="resize rounded-md w-[40rem] h-[20rem] text-center py-5 mt-10"
+        value={data}
+      ></textarea>
+      <br />
+      <button
+        type="button"
+        value="copy text"
+        className="bg-third text-xl cursor-pointer text-secondary mt-2 rounded px-10 py-2 my-4 hover:bg-secondary hover:text-third border-2 border-third"
+        onClick={() => {
+          copy(`${data}`);
+        }}
+      > <BsClipboard className="inline"/> copy to clipboard</button>
     </div>
   );
 }
