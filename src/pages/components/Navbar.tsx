@@ -5,7 +5,7 @@ const Navbar: NextPage = () => {
   return (
     <>
       <Head>
-        <title>codeAI</title>
+        <title>codeAI - Your AI pair programmer.</title>
         <meta name="description" content="Your AI pair programmer." />
       </Head>
       < div className="flex justify-center py-10 text-2xl">
