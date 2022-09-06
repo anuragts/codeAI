@@ -34,7 +34,7 @@ export default function Js() {
     }
     return (
         <div className="text-center">
-      <div className="my-5 text-3xl"> Javascript/Typescript Generator💎</div>
+      <div className="my-5 text-3xl"> Javascript/Typescript Generator💎(beta)</div>
       <form onSubmit={handleSubmit}>
         <input type="text" className="text-xl resize rounded-md mt-5 px-20 py-5  " name="prompt" placeholder="Enter your query" /> <br />
         <button
