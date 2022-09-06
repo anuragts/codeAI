@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import {AiOutlineArrowRight} from "react-icons/ai";
 
@@ -8,11 +7,8 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>codeAI</title>
-      </Head>
       <div className="text-5xl	 text-center font-thin mt-40">
-        Your <span className="text-third font-bold">AI</span> pair{" "}
+        Your <span className="text-third font-bold">AI</span> pair
         <span className="text-third font-bold">programmer</span>
       </div>
       <div>

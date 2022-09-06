@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Spinner from "./components/Spinner";
 import copy from "copy-to-clipboard";
-import {BsClipboard} from "react-icons/bs";
+import { BsClipboard } from "react-icons/bs";
 
 export default function Sql() {
   const [data, setData] = useState([]);
