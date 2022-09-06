@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <>
       <div className="text-5xl	 text-center font-thin mt-40">
         Your <span className="text-third font-bold">AI</span> pair
-        <span className="text-third font-bold">programmer</span>
+        <span className="text-third font-bold"> programmer</span>
       </div>
       <div>
         <div className="text-xl text-center font-thin text-accent my-4">
