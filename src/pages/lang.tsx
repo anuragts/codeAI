@@ -41,7 +41,7 @@ export default function Lang() {
           id=""
           className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
         >
-          <option value="javascript" className="text-base">
+          <option value="javascript" className="">
             JavaScript
           </option>
           <option value="python">Python</option>
