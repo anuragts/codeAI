@@ -8,12 +8,9 @@ CodeAI is a tool for automatically generating code from natural language specifi
 
 
 ```bash
-npm install
-```
-# or
-
-```bash
-yarn install
+    npm install
+    # or
+    yarn install
 ```
 ## Running
     
