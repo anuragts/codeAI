@@ -63,6 +63,8 @@ export default function Js() {
         className="bg-third text-base md:text-xl cursor-pointer text-secondary mt-8 md:mt-2 rounded px-6 md:px-10 py-2 my-4 hover:bg-secondary hover:text-third border-2 border-third"
         onClick={() => {
           copy(`${data}`);
+          alert("Copied to clipboard");
+
         }}
       >
         {" "}
