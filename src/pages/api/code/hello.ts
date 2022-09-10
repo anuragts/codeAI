@@ -11,3 +11,7 @@ export default (req: NextRequest) => {
 export const config = {
   runtime: 'experimental-edge',
 };
+export const Config = {
+  runtime: 'experimental-edge',
+};
+

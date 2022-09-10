@@ -26,3 +26,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   });
   res.status(200).json(data.choices[0].text);
 };
+export const Config = {
+  runtime: 'experimental-edge',
+};
+
+
