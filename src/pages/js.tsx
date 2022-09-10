@@ -41,6 +41,7 @@ export default function Js() {
           type="text"
           className="md:text-xl text-base resize rounded-md mt-5 px-2 md:px-20 md:py-5 py-3"
           name="prompt"
+          required
           placeholder="Enter your query"
         />{" "}
         <br />
