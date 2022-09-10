@@ -1,3 +1,5 @@
+import Image from "next/image";
+import codeai from "../img/codeai.png";
 const About = () => {
   return (
     <>
@@ -13,11 +15,13 @@ const About = () => {
         <div className=" text-xl md:text-3xl my-5 mt-[3rem]">Infrastructure🧱</div>
         <div className="flex justify-center">
 
-        <img
+          <Image src={codeai} alt="codeai infrastructure" width={800} height={500}  />
+
+        {/* <img
           src="../img/codeai.png"
           alt="codeai infrastructure"
           className="md:w-[50vw] w-[80vw]"
-        />
+        /> */}
         </div>
       </div>
     </>
