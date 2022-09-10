@@ -26,3 +26,7 @@ const response = await openai.createCompletion({
 res.status(200).json(response.data.choices[0].text);
     
 }
+export const Config = {
+    runtime: 'experimental-edge',
+  };
+  
