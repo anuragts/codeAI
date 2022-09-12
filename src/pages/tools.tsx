@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { DiJavascript1 ,DiOpensource} from "react-icons/di";
 import { SiMysql } from "react-icons/si";
-import {VscFileCode} from 'react-icons/vsc'
+import {VscFileCode,VscRegex} from 'react-icons/vsc'
 import {AiOutlineFieldTime,AiFillCode} from 'react-icons/ai'
 
 
@@ -67,6 +67,21 @@ const Tools:NextPage = () => {
             <button
               className="bg-third  text-base md:text-xl text-secondary rounded px-5 py-2 my-4 hover:bg-secondary hover:text-third border-2 border-third"
               onClick={() => router.push("/interview")}
+            >
+              Try Now
+            </button>
+          </div>
+        </div>
+          {/* Regular Expression generator */}
+          <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+          <div className="text-center my-3 mt-7 text-lg">
+            <VscRegex className="inline text-3xl mx-3 " /> <br />{" "}
+            <span className=""> generator </span>
+          </div>
+          <div className="text-center my-3">
+            <button
+              className="bg-third  text-base md:text-xl text-secondary rounded px-5 py-2 my-4 hover:bg-secondary hover:text-third border-2 border-third"
+              onClick={() => router.push("/regex")}
             >
               Try Now
             </button>
