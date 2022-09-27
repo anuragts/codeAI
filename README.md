@@ -6,6 +6,7 @@ CodeAI is a tool for automatically generating code from natural language specifi
 ![Architecture image](./public/img/codeai.png)
 ## Installation
 
+Rename .env.example to .env and add your openai api key there.
 
 ```bash
     npm install
