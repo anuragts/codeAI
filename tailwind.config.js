@@ -16,14 +16,10 @@ module.exports = {
       },
       screens: {
         fd: "300px",
-
-				sm: "450px",
-		
-				md: "768px",
-		
-		
-				lg: "1350px",
-			  },
+	sm: "450px",
+	md: "768px",
+	lg: "1350px",
+	},
 
         fontFamily: {
           custom: ["Josefin Sans", "sans-serif"],
