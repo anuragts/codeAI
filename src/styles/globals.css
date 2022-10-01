@@ -15,19 +15,9 @@ html {
 ;
 }
 body{
-  /* margin-left: 5rem;
-  margin-right: 5rem; */
-  overflow-x: hidden;
   transition: all .5s;
 }
-#Nav{
-  margin: 0vw;
-}
 @media only screen and (max-width: 768px) {
-  body{
-    /* margin-left: 2rem;
-    margin-right: 2rem; */
-  }
   span{
     font-size: 2rem;
   }
