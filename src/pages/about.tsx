@@ -13,7 +13,7 @@ const About = () => {
       </p>
       <div className="text-center">
         <div className=" text-xl md:text-3xl my-5 mt-[3rem]">Infrastructure🧱</div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mx-20 ">
 
           <Image src={codeai} alt="codeai infrastructure" width={800} height={500}  />
 
