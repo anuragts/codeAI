@@ -1,5 +1,5 @@
 import Image from "next/image";
-import codeai from "../img/codeai.png";
+import codeai from "../../public/img/codeai.png";
 const About = () => {
   return (
     <>
