@@ -1,9 +1,12 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import useState from "react"
+import { useState } from "react";
+
+
 
 const Navbar: NextPage = () => {
+  const [isMenuOpen , setIsMenuOpen] = useState(false);
   const [dark, setDark] = useState("false");
   const DarkMode = () => {
     localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
@@ -19,39 +22,124 @@ const Navbar: NextPage = () => {
       setDark(true);
     }
   };
+
   return (
     <>
       <Head>
         <title>codeAI - Your AI pair programmer.</title>
         <meta name="description" content="Your AI pair programmer." />
       </Head>
-<<<<<<< HEAD
-      < div className="flex justify-center dark:bg-black dark:text-white py-10 md:text-2xl text-base	">
-        <div className=" cursor-pointer	">
-          <Link href="/"><div className="ml-[0.5rem] md:ml-[2rem]">code<span className="text-third mr-[1rem]">AI</span></div></Link>
-        </div>
+
+      <div className="flex flex-row justify-between md:text-2xl text-base bg-gray-50 shadow-md">
+        <Link href="/"><div className=" flex justify-items-center items-center px-10 py-0 text-5xl duration-300 "><span className="cursor-pointer">code<span className=" text-third mr-[1rem]">AI</span></span></div></Link>
         <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
     <input type="checkbox" name="toggle" onClick={DarkMode} id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
     <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
 </div>
-        <div className="mx-[0.5rem] md:mx-[2rem] ">
-          <Link href="/about">about📕</Link>
-=======
-      <div className="flex flex-row justify-between md:text-2xl text-base bg-gray-50 shadow-md">
-        <Link href="/"><div className=" flex justify-items-center items-center px-10 py-0 text-5xl duration-300 "><span className="cursor-pointer">code<span className=" text-third mr-[1rem]">AI</span></span></div></Link>
-        <div className="flex  md:text-2xl text-base right-0.5 text-justify">
+         <div className="flex  md:text-2xl text-base right-0.5 text-justify">
         <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 ">
           <Link href="/about">About</Link>
         </div>
+
+     
+     
         <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 cursor-help">
           <Link href='/help'><div className="cursor-help">Guide</div></Link>
->>>>>>> 9f8993e9c4b947e2ae0052d833296b61ded941eb
         </div>
         <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
+
+      
+      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="relative flex items-center justify-between">
+      <Link href="/"><div className=" flex justify-items-center items-center px-5 py-0 text-4xl duration-300 "><span className="cursor-pointer">code<span className=" text-third mr-[1rem]">AI</span></span></div></Link>
+        <ul className="flex items-center hidden space-x-8 lg:flex">
+          <li>
+          <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
+          <Link href="/about">About</Link>
+          </div>
+          </li>
+          <li>
+          <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 inline cursor-help">
+          <Link href='/help'>Guide</Link>
+          </div>
+          </li>
+          <li>
+          <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
+
           <Link href="/tools">Tools</Link>
+          </div>
+          </li>
+        </ul>
+        <div className="lg:hidden">
+          <button
+            aria-label="Open Menu"
+            title="Open Menu"
+            className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-third focus:bg-third"
+            onClick={() => setIsMenuOpen(true)}
+          >
+            <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
+              />
+              <path
+                fill="currentColor"
+                d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
+              />
+              <path
+                fill="currentColor"
+                d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
+              />
+            </svg>
+          </button>
+          {isMenuOpen && (
+            <div className="absolute top-0 left-0 w-full">
+              <div className="p-5 bg-white border rounded shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                  <Link href="/"><div className=" flex justify-items-center items-center px-1 py-0 text-5xl duration-300 "><span className="cursor-pointer">code<span className=" text-third mr-[1rem]">AI</span></span></div></Link>
+                  </div>
+                  <div>
+                    <button
+                      aria-label="Close Menu"
+                      title="Close Menu"
+                      className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <nav>
+                  <ul className="space-y-4">
+                    <li>
+                    <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-3 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
+                      <Link href="/about">About</Link>
+                    </div>
+                    </li>
+                    <li>
+                    <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-3 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
+                      <Link href='/help'>Guide</Link>
+                    </div>
+                    </li>
+                    <li>
+                    <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-3 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
+                      <Link href="/tools">Tools</Link>
+                    </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-      </div>
+    </div>
       
     </>
   );
