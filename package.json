@@ -13,10 +13,10 @@
     "@vercel/edge": "^0.0.4",
     "copy-to-clipboard": "^3.3.2",
     "dotenv": "^16.0.2",
-    "next": "^12.2.5",
+    "next": "^12.3.1",
     "openai": "^3.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0"
   },
   "devDependencies": {
