@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='text-center '>Made with 💙</div>
+    <div className=' mt-4 md:text-lg text-center'>Made with 💙</div>
   )
 }
 
