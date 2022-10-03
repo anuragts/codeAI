@@ -32,7 +32,7 @@ const Navbar: NextPage = () => {
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
       <Link href="/"><div className=" flex justify-items-center items-center px-5 py-0 text-4xl duration-300 "><span className="cursor-pointer">code<span className=" text-third mr-[1rem]">AI</span></span></div></Link>
-        <ul className="flex items-center  space-x-8 lg:flex">
+        <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
           <div className="mx-[0.5rem] my-[0.5rem] md:mx-[2rem] p-5 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
           <Link href="/about">About</Link>
