@@ -5,7 +5,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { prompt } = req.body
     const {lang1} = req.body
     const {lang2} = req.body
-const response = await openAi.createCompletion({
+const data = await openAi.createCompletion({
   model: "code-davinci-002",
   prompt: `##### Translate this function  from ${lang1} into ${lang2}\n### ${lang1}\n ${prompt}    \n    ### ${lang2}`,
   temperature: 0,
@@ -15,8 +15,11 @@ const response = await openAi.createCompletion({
   presence_penalty: 0.0,
   stop: ["###"],
 });
-res.status(200).json(response.data.choices[0].text);
-    
+if (data) {
+  res.status(200).json(data);
+} else {
+  res.status(500).json({ error: "No data fetched" });
+}    
 }
 export const Config = {
     runtime: 'experimental-edge',

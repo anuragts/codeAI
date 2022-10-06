@@ -22,7 +22,8 @@ export default function Space() {
       },
     });
     const result = await response.json();
-    const formatted: any = "The space complexity of this function is " + result;
+    const y = result.choices[0].text;
+    const formatted: any = "The space complexity of this function is " + y;
     setData(formatted);
     setLoading(false);
   };
