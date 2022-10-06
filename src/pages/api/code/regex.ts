@@ -13,8 +13,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         presence_penalty: 0,
         stop: ["\n\n","\n"],   
 });
-    res.status(200).json(data.choices[0].text);
-};
+if (data) {
+    res.status(200).json(data);
+  } else {
+    res.status(500).json({ error: "No data fetched" });
+  }};
 export const Config = {
     runtime: 'experimental-edge',
   };

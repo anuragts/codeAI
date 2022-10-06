@@ -22,8 +22,8 @@ export default function Js() {
       },
     });
     const result = await response.json();
-
-    let formatted = result.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
+    const y = result.choices[0].text;
+    let formatted = y.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
     let formatted2: any = "const " + formatted.replace(/ +(?= )/g, "");
     let formatted3: any = formatted2.replace(/;/g, `; \n `);
 

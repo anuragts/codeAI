@@ -22,8 +22,8 @@ export default function Sql() {
       },
     });
     const result = await response.json();
-    // console.log(result);
-    let formatted = result.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
+    const y = result.choices[0].text;
+    let formatted = y.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
     let formatted2: any = "SELECT " + formatted.replace(/ +(?= )/g, "");
     setData(formatted2);
     // console.log(result);
