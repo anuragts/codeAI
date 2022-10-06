@@ -1,21 +1,9 @@
 import { NextApiRequest,NextApiResponse } from "next";
-const { Configuration, OpenAIApi } = require("openai");
-import { config } from 'dotenv'
-config();
-
-// load environment variables
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-
-// Create api to get code from the prompt
-const openai = new OpenAIApi(
-    new Configuration({
-        apiKey: OPENAI_API_KEY,
-    })
-);
+import {openAi} from "../../../config/openAi.config";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { prompt } = req.body;
-    const { data } = await openai.createCompletion({
+    const { data } = await openAi.createCompletion({
         model: "code-davinci-002",
         prompt: `${prompt} The time complexity of this function is `,
         temperature: 0,
