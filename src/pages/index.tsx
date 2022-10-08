@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </div>
       <div>
         <div className="md:text-xl text-lg text-center font-thin text-accent my-4">
-          CodeAI uses openAI codex api to provide <br /> full explanation of
+          CodeAI uses openAI codex api to provide  <br /> full explanation of
           code and many more.
         </div>
       </div>
