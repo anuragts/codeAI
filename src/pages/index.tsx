@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <button
           className="bg-third text-base md:text-xl text-secondary rounded px-5 py-2 md:px-10 md:py-4 my-4 hover:bg-secondary hover:text-third border-2 border-third"
           onClick={() => router.push("/tools")}>
-          Get Started <AiOutlineArrowRight className="inline text-xl md:text-3xl" />
+          Get Started <AiOutlineArrowRight className="inline text-xl 56md:text-3xl" />
         </button>
       </div>
     </>
