@@ -1,5 +1,3 @@
-// pages/api/hello.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 
 export default (req: NextRequest) => {
@@ -7,11 +5,8 @@ export default (req: NextRequest) => {
     name: `Hello, from ${req.url} , use another route .`,
   });
 };
-
+// edge function
 export const config = {
-  runtime: 'experimental-edge',
-};
-export const Config = {
   runtime: 'experimental-edge',
 };
 

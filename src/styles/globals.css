@@ -21,6 +21,8 @@ body{
   }
 }
 
+/* custom spinner stye */
+
 .loadingSpinner {
   width: 64px;
   height: 64px;

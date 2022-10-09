@@ -4,16 +4,19 @@ import copy from "copy-to-clipboard";
 import { BsClipboard } from "react-icons/bs";
 
 export default function Sql() {
+  // set the initial state of the data to an empty array
   const [data, setData] = useState([]);
+  // set the initial state of the loading to false
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: any) => {
+    // prevent default input form submission
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
     const dataObj = Object.fromEntries(data);
     setLoading(true);
-    // console.log(dataObj.prompt);
+    // fetch the data from the api
     const response = await fetch("/api/code/sql", {
       method: "POST",
       body: JSON.stringify({ prompt: dataObj.prompt }),
@@ -23,6 +26,7 @@ export default function Sql() {
     });
     const result = await response.json();
     const y = result.choices[0].text;
+    // formate the data using regex 
     let formatted = y.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
     let formatted2: any = "SELECT " + formatted.replace(/ +(?= )/g, "");
     setData(formatted2);
@@ -48,6 +52,7 @@ export default function Sql() {
           Submit
         </button>
       </form>
+      {/* if loading show spinner else loading is null */}
       {loading ? <Spinner /> : null}
       <textarea
         className="resize rounded-md  sm:w-[20rem] sm:h-[20rem] w-[21rem] h-[15rem]  md:w-[40rem] md:h-[20rem] text-center py-5 px-1 mt-10"
