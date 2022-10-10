@@ -49,8 +49,7 @@ export default function Translate() {
             name="lang1"
             id="lang1"
             className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
-            onChange={updateSelect('lang1' , 'lang2')
-            }
+            
           >
             <option value="javascript">JavaScript</option>
             <option value="python">Python</option>
@@ -61,7 +60,6 @@ export default function Translate() {
             name="lang2"
             id="lang2"
             className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
-            onChange={updateSelect('lang2' , 'lang1')}
           >
             <option value="python">Python</option>
             <option value="javascript">JavaScript</option>
@@ -106,19 +104,5 @@ export default function Translate() {
       </div>
     </>
   );
-}
-function updateSelect(a: string , b: string): any  {
-  var first = document.getElementById(a) as HTMLSelectElement
-  var other = document.getElementById(b) as HTMLSelectElement
-  console.log(a+" "+b)
-  // for(var i = 0 ; i< other.options.length ; ++i)
-  // {
-  //   other.options[i].disabled = false
-  // }
-  // if(first.selectedIndex == 0){
-  //   return;
-  // }
-  // other.options[first.selectedIndex].disabled = true
-  // console.log(other.options.length)
 }
 
