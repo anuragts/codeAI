@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent,  useState } from "react";
 import Spinner from "./components/Spinner";
 import copy from "copy-to-clipboard";
 import { BsClipboard } from "react-icons/bs";
@@ -27,6 +27,7 @@ export default function Translate() {
         "Content-Type": "application/json",
       },
     });
+
     const result = await response.json();
     const y = result.choices[0].text;
     let formatted = y.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
@@ -41,24 +42,28 @@ export default function Translate() {
       <div className="text-center text-sm md:text-xl">
         <div className="md:my-5 my-2  text-xl md:text-3xl">
           {" "}
-          Language converter🔄
+          Language converter 🔄
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
           <select
             name="lang1"
-            id=""
+            id="lang1"
             className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
+            
           >
-            <option value="python">Python</option>
             <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="typescript">TypeScript</option>
+            
           </select>
           <select
             name="lang2"
-            id=""
+            id="lang2"
             className="md:text-xl text-base resize rounded-md my-5 mx-5 py-3 md:py-5 px-3 md:px-5 text-third border-2 border-third"
           >
-            <option value="javascript">JavaScript</option>
             <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="typescript">TypeScript</option>
           </select>
           <input
             type="text"
@@ -100,3 +105,4 @@ export default function Translate() {
     </>
   );
 }
+
