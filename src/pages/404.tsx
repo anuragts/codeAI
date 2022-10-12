@@ -19,7 +19,7 @@ export default function Custom404() {
       </div>
       <div className="flex justify-center mt-[1rem] ">
         <div className="font-light text-[#7c7878] ">
-          Sorry the page you looking for doesn't exist
+          Sorry the page you looking for doesn&apos;t exist
         </div>
       </div>
       <div className="flex justify-center mt-3">
