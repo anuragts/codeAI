@@ -42,7 +42,7 @@ export default function Js() {
           className="md:text-xl text-base resize rounded-md mt-5 px-2 md:px-20 md:py-5 py-3"
           name="prompt"
           required
-          placeholder="Try 'Create Typescript function tc'"
+          placeholder="Try 'Create a Typescript function to fetch data from pokemon api.'"
         />{" "}
         <br />
         <button

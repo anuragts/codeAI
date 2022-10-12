@@ -13,7 +13,7 @@ const Tools:NextPage = () => {
       <div className=" mx-auto items-center text-center mt-3 md:mt-5 text-3xl md:text-5xl  w-full">tools🛠️</div>
       <div className="flex text-base md:text-xl flex-wrap mx-auto justify-center">
         {/* sql */}
-        <div className="mx-auto w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+        <div className="px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3  text-lg">
             <SiMysql className="inline text-5xl mx-3 " /> <br />{" "}
             <span className=""> query generator </span>
@@ -28,7 +28,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
         {/* Javascript generator */}
-        <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+        <div className=" px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3 mt-7  text-lg">
             <DiJavascript1 className="inline text-3xl mx-3 " /> <br />{" "}
             <span className=""> generator </span>
@@ -43,7 +43,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
         {/* Lang explainer  */}
-        <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+        <div className=" px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3 mt-7 text-lg">
             <VscFileCode className="inline text-3xl mx-3 " /> <br />{" "}
             <span className=""> explainer </span>
@@ -58,7 +58,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
          {/* Interview question generator */}
-         <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+         <div className=" px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3 mt-7 text-lg">
             <DiOpensource className="inline text-3xl mx-3 " /> <br />{" "}
             <span className=""> Interview question generator </span>
@@ -73,7 +73,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
           {/* Regular Expression generator */}
-          <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+          <div className=" px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3 mt-7 text-lg">
             <VscRegex className="inline text-3xl mx-3 " /> <br />{" "}
             <span className=""> generator </span>
@@ -88,7 +88,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
         {/* Time complexity */}
-        <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+        <div className=" px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3 mt-7 text-lg">
             <AiOutlineFieldTime className="inline text-3xl mx-3 " /> <br />{" "}
             <span className=""> complexity calculator </span>
@@ -103,7 +103,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
         {/* Lang converter */}
-        <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+        <div className=" px-5 w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3 mt-7 text-lg">
             <AiFillCode className="inline text-3xl mx-3 " /> <br />{" "}
             <span className=""> converter </span>
@@ -118,7 +118,7 @@ const Tools:NextPage = () => {
           </div>
         </div>
          {/* Space complexity */}
-        <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
+        <div className=" w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10 px-5">
           <div className="text-center my-3 mt-7 text-lg">
             <AiFillContainer className="inline text-3xl mx-3 " /> <br />{" "}
             <span className="">Space complexity calculator </span>
