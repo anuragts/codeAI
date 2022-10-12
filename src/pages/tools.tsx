@@ -11,7 +11,7 @@ const Tools:NextPage = () => {
   return (
     <>
       <div className=" mx-auto items-center text-center mt-3 md:mt-5 text-3xl md:text-5xl  w-full">tools🛠️</div>
-      <div className="flex text-base md:text-xl flex-wrap mx-auto justify-around">
+      <div className="flex text-base md:text-xl flex-wrap mx-auto justify-center">
         {/* sql */}
         <div className="mx-auto w-11/12 md:w-1/4  h-2/3 md:h-1/2 border-2 border-third mx-3 md:mx-5 my-10">
           <div className="text-center my-3  text-lg">
