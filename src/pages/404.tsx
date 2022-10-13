@@ -15,10 +15,10 @@ export default function Custom404() {
         />
       </div>
       <div className="flex justify-center ">
-        <div className="font-bold text-5xl">Whooops !</div>
+        <div className="font-bold text-3xl md:text-5xl">Whooops !</div>{" "}
       </div>
       <div className="flex justify-center mt-[1rem] ">
-        <div className="font-light text-[#7c7878] ">
+        <div className="font-light text-[#7c7878] mx-8 ">
           Sorry the page you looking for doesn&apos;t exist
         </div>
       </div>
