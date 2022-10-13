@@ -12,7 +12,7 @@ const Navbar: NextPage = () => {
 
         <meta
           property="og:image"
-          content="/api/og"
+          content="https://code.tfss.live/api/og"
           name="description"
         />
       </Head>
