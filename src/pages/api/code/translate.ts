@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { openAi } from "../../../config/openAi.config";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { prompt } = req.body;
+  const prompt: string = req.body;
   const { lang1 } = req.body;
   const { lang2 } = req.body;
   const response = await openAi.createCompletion({
