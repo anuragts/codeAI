@@ -5,27 +5,16 @@ import { useState } from "react";
 
 const Navbar: NextPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [dark, setDark] = useState(false);
-  const DarkMode = () => {
-    localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setDark(false);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setDark(true);
-    }
-  };
-
   return (
     <>
       <Head>
         <title>codeAI - Your AI pair programmer.</title>
-        <meta name="description" content="Your AI pair programmer." />
+
+        <meta
+          property="og:image"
+          content="/api/og"
+          name="description"
+        />
       </Head>
       <div className="px-4 py-5 mx-auto w-full md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between ">
@@ -37,8 +26,8 @@ const Navbar: NextPage = () => {
                 </span>
               </div>
             </Link>
-        </div>
-          <div className="flex flex-row items-center  lg:flex hidden lg:inline-flex md:inline-flex list-none">
+          </div>
+          <div className=" flex-row items-center   hidden lg:inline-flex md:inline-flex list-none">
             <li>
               <div className="  p-5 rounded-2xl hover:bg-third hover:text-white duration-300 inline ">
                 <Link href="/about">About</Link>
@@ -55,10 +44,6 @@ const Navbar: NextPage = () => {
               </div>
             </li>
           </div>
-          {/* <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
-    <input type="checkbox" name="toggle" onClick={DarkMode} id="toggle" className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
-    <label htmlFor="toggle"  className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
-    </div> */}
           <div className="lg:hidden md:hidden">
             <button
               aria-label="Open Menu"

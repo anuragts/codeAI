@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/dotenv": "^8.2.0",
     "@vercel/edge": "^0.0.4",
+    "@vercel/og": "^0.0.18",
     "copy-to-clipboard": "^3.3.2",
     "dotenv": "^16.0.2",
     "next": "^12.3.1",
