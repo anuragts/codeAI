@@ -2,8 +2,8 @@ import { NextApiRequest , NextApiResponse  } from "next";
 import {openAi} from "../../../config/openAi.config";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-    const { prompt } = req.body
-    const { data } = await openAi.createCompletion({
+  const  prompt:string  = req.body
+  const { data } = await openAi.createCompletion({
         model: "code-davinci-002",
         prompt: `The Regex for a string that contains ${ prompt } is - const regex =  `,
         temperature: 0.5,
