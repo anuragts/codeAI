@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
 export default (req: NextRequest) => {
   return NextResponse.json({
@@ -7,6 +7,5 @@ export default (req: NextRequest) => {
 };
 // edge function
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: "experimental-edge",
 };
-

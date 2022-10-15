@@ -1,7 +1,8 @@
 // /pages/api/og.tsx
-
+// imports image response from vercel
 import { ImageResponse } from '@vercel/og';
 
+// make this as edge function
 export const config = {
   runtime: 'experimental-edge',
 };

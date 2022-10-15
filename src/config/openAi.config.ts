@@ -12,4 +12,4 @@ const openAi = new OpenAIApi(
     })
 );
 
-export {openAi};
+export { openAi };
