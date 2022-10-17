@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */ 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -11,20 +11,19 @@ module.exports = {
         secondary: "#EEEEEE",
         third: "#00ADB5",
         accent: "#393E46",
-        'bl':'rgba(0, 0, 0, 0.5)',
-
+        bl: "rgba(0, 0, 0, 0.5)",
       },
       screens: {
         fd: "300px",
-	sm: "450px",
-	md: "768px",
-	lg: "1350px",
-	},
+        sm: "450px",
+        md: "768px",
+        lg: "1350px",
+      },
 
-        fontFamily: {
-          custom: ["Josefin Sans", "sans-serif"],
-        },
+      fontFamily: {
+        custom: ["Josefin Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
-}
+};

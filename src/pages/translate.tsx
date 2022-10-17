@@ -84,9 +84,9 @@ export default function Translate() {
 
         {loading ? <Spinner /> : null}
         <textarea
-          className="resize rounded-md  sm:w-[20rem] sm:h-[20rem] w-[21rem] h-[15rem]  md:w-[40rem] md:h-[20rem]  py-5 px-1 mt-10"
-          value={data}
-        ></textarea>
+        className="resize rounded-md md:w-[40rem]  sm:w-[20rem] sm:h-[20rem]   w-[15rem] h-[15rem]   md:h-[20rem] text-center py-5 px-1 mt-10"
+        value={data}
+      ></textarea>
         <br />
         <button
           type="button"

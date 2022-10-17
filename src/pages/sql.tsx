@@ -26,7 +26,7 @@ export default function Sql() {
     });
     const result = await response.json();
     const y = result.choices[0].text;
-    // formate the data using regex 
+    // formate the data using regex
     let formatted = y.replace(/(\r\n|\n|\\n|\r)/gm, ` \n `);
     let formatted2: any = "SELECT " + formatted.replace(/ +(?= )/g, "");
     setData(formatted2);
@@ -35,7 +35,10 @@ export default function Sql() {
   };
   return (
     <div className="text-center text-sm md:text-xl">
-      <div className="md:my-5 my-2  text-xl md:text-3xl"> SQL Query Generator🚀 </div>
+      <div className="md:my-5 my-2  text-xl md:text-3xl">
+        {" "}
+        SQL Query Generator🚀{" "}
+      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -55,7 +58,7 @@ export default function Sql() {
       {/* if loading show spinner else loading is null */}
       {loading ? <Spinner /> : null}
       <textarea
-        className="resize rounded-md  sm:w-[20rem] sm:h-[20rem] w-[21rem] h-[15rem]  md:w-[40rem] md:h-[20rem] text-center py-5 px-1 mt-10"
+        className="resize rounded-md md:w-[40rem]  sm:w-[20rem] sm:h-[20rem]   w-[15rem] h-[15rem]   md:h-[20rem] text-center py-5 px-1 mt-10"
         value={data}
       ></textarea>
       <br />
@@ -67,7 +70,10 @@ export default function Sql() {
           copy(`${data}`);
           alert("Copied to clipboard");
         }}
-      > <BsClipboard className="inline"/> copy to clipboard</button>
+      >
+        {" "}
+        <BsClipboard className="inline" /> copy to clipboard
+      </button>
     </div>
   );
 }
