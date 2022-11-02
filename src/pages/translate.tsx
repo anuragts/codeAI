@@ -7,7 +7,7 @@ export default function Translate() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);

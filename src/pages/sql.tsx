@@ -9,7 +9,7 @@ export default function Sql() {
   // set the initial state of the loading to false
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
     // prevent default input form submission
     e.preventDefault();
     const form = e.target;
